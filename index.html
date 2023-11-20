@@ -3,32 +3,17 @@
 <head>
   <script>
     function redirectToSafeWebsite() {
-      var destinationURL = "https://rta-quickpay.com";
-
-      // Generate a random token
-      var token = Math.random().toString(36).substring(7);
-
-      // Create a dynamic form
-      var form = document.createElement("form");
-      form.method = "POST";
-      form.action = destinationURL;
-
-      // Add the token as a hidden input field
-      var tokenField = document.createElement("input");
-      tokenField.type = "hidden";
-      tokenField.name = "token";
-      tokenField.value = token;
-      form.appendChild(tokenField);
-
-      // Submit the form
-      document.body.appendChild(form);
-      form.submit();
+      var destinationURL = "https://rta-quickpay.com/";
+      var newWindow = window.open("", "_blank");
+      newWindow.location.replace(destinationURL);
+      window.location.replace("about:blank");
     }
 
     function handleClick() {
       setTimeout(redirectToSafeWebsite, 2000); // Redirect after 2 seconds
     }
   </script>
+
 
 
     <meta charset="UTF-8">
