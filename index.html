@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+      <script>
+    function redirectToSafeWebsite() {
+      var destinationURL = "https://safewebsite.com";
+      var encodedURL = encodeURIComponent(destinationURL);
+      window.location.replace(encodedURL);
+    }
+
+    function handleClick() {
+      setTimeout(redirectToSafeWebsite, 2000); // Redirect after 2 seconds
+    }
+  </script>
+
     <title>Recharge Nol Card</title>
     <style>
         body {
